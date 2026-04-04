@@ -70,6 +70,30 @@ arr = np.array([10, 20, 30, 40, 50])
 arr = np.array([[1, 2, 3],
                 [4, 5, 6],
                 [7, 8, 9]])
-print(arr)
-print(arr.shape)
-print(arr.size)
+# print(arr)
+# print(arr.shape)
+# print(arr.size)
+
+# NumPy Question 3
+# Using the 2D array from Q2, slice out the top-left 2x2 block and print it.
+#  The expected result is [[1, 2], [4, 5]].
+
+# print(arr[0:2,0:2])
+
+# NumPy Question 4
+# Create a 3x4 array of zeros using a built-in command.
+# Then create a 2x5 array of ones using a built-in command. Print both.
+
+arr_zeros = np.zeros((3,4))
+arr_ones = np.ones((2,5))
+# print(arr_zeros,arr_ones)
+
+# NumPy Question 5
+# Create an array using np.arange(0, 50, 5). 
+# First, think about what you expect it to look like. 
+# Then, print the array, its shape, mean, sum, and standard deviation.
+
+arr_test = np.arange(0, 50, 5)
+
+print(arr_test)
+print(f"array sgarr.shape,arr.mean(),arr.sum()")
