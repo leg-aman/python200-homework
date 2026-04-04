@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # Pandas Q1 
 # creating a DataFrame
@@ -37,7 +38,7 @@ df["name_upper"] = df["name"].apply(str.upper)
 # Print the result.
 
 groupedBy_City = df.groupby("city")["grade"].mean()
-print(groupedBy_City)
+# print(groupedBy_City)
 # Pandas Q6
 #  replace a value in a column
 
@@ -49,3 +50,26 @@ df["city"] = df["city"].replace("Austin","Houston")
 
 sorted_df = df.sort_values("grade", ascending=False)
 # print(sorted_df.head(3))
+
+# =========================================================================
+# NumPy Q1
+# Create a 1D NumPy array from the list [10, 20, 30, 40, 50]. 
+# Print its shape, dtype, and ndim.
+
+arr = np.array([10, 20, 30, 40, 50])
+# print(arr)
+# print(type(arr))
+# print(arr.dtype)
+# print(arr.shape)
+# print(arr.ndim)
+
+# NumPy Question 2
+# Create the following 2D array and 
+# print its shape and size (total number of elements).
+
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+print(arr)
+print(arr.shape)
+print(arr.size)
