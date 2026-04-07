@@ -94,6 +94,12 @@ arr_ones = np.ones((2,5))
 # Then, print the array, its shape, mean, sum, and standard deviation.
 
 arr_test = np.arange(0, 50, 5)
+# print(f"array: {arr_test} \n Shape: {arr.shape} \n Mean: {np.mean(arr_test)} \n Sum: {np.sum(arr_test)}\n Standard Deviation: {np.std(arr_test)}")
 
-print(arr_test)
-print(f"array sgarr.shape,arr.mean(),arr.sum()")
+# NumPy Question 6
+# Generate an array of 200 random values drawn from a normal distribution 
+# with mean 0 and standard deviation 1 (use np.random.normal()). Print the mean and standard deviation of the result.
+
+arr_random = np.random.normal(0,1,200)
+# print(f"Mean: {np.mean(arr_random)}")
+# print(f"Standard Deviation: {np.std(arr_random)}")
