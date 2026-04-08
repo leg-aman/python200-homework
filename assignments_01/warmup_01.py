@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Pandas Q1 
 # creating a DataFrame
@@ -103,3 +104,63 @@ arr_test = np.arange(0, 50, 5)
 arr_random = np.random.normal(0,1,200)
 # print(f"Mean: {np.mean(arr_random)}")
 # print(f"Standard Deviation: {np.std(arr_random)}")
+
+# =========================================================================
+# Matplotlib Question 1
+# Plot the following data as a line plot. Add a title "Squares",
+#  x-axis label "x", and y-axis label "y"
+
+x = [0, 1, 2, 3, 4, 5]
+y = [0, 1, 4, 9, 16, 25]
+# plt.plot(x,y)
+# plt.title("Squares")
+# plt.xlabel("x")
+# plt.ylabel("y")
+# plt.show()
+
+# Matplotlib Question 2
+# Create a bar plot for the following subject scores. 
+# Add a title "Subject Scores" and label both axes.
+
+subjects = ["Math", "Science", "English", "History"]
+scores   = [88, 92, 75, 83]
+# plt.bar(subjects, scores)
+# plt.title("Subject Scores")
+# plt.xlabel("Subjects")
+# plt.ylabel("Scores")
+# plt.show()
+
+# Matplotlib Question 3
+# Plot the two datasets below as a scatter plot on the same figure. 
+# Use different colors for each, add a legend, and label both axes.
+
+x1, y1 = [1, 2, 3, 4, 5], [2, 4, 5, 4, 5]
+x2, y2 = [1, 2, 3, 4, 5], [5, 4, 3, 2, 1]
+# plt.scatter(x1, y1, color="blue", label="Dataset 1")
+# plt.scatter(x2, y2, color="red", label="Dataset 2")
+
+# plt.title("Scatter Plot Comparison")
+# plt.xlabel("X Axis")
+# plt.ylabel("Y Axis")
+# plt.legend()
+# plt.show()
+
+# Matplotlib Question 4
+# Use plt.subplots() to create a figure with 1 row and 2 subplots side by side.
+# In the left subplot, plot x vs y from Q1 as a line. In the right subplot, plot 
+# the subjects and scores from Q2 as a bar plot. Add a title to each subplot and 
+# call plt.tight_layout() before showing.
+
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+plt.title("Squares")
+plt.xlabel("x")
+plt.ylabel("y")
+
+plt.subplot(1, 2, 2)
+plt.bar(subjects, scores)
+plt.title("Subject Scores")
+plt.xlabel("Subjects")
+plt.ylabel("Scores")
+plt.tight_layout()
+plt.show()
