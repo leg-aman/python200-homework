@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import statistics as stats
 
 # Pandas Q1 
 # creating a DataFrame
@@ -151,16 +152,81 @@ x2, y2 = [1, 2, 3, 4, 5], [5, 4, 3, 2, 1]
 # the subjects and scores from Q2 as a bar plot. Add a title to each subplot and 
 # call plt.tight_layout() before showing.
 
-plt.subplot(1, 2, 1)
-plt.plot(x,y)
-plt.title("Squares")
-plt.xlabel("x")
-plt.ylabel("y")
+# plt.subplot(1, 2, 1)
+# plt.plot(x,y)
+# plt.title("Squares")
+# plt.xlabel("x")
+# plt.ylabel("y")
 
-plt.subplot(1, 2, 2)
-plt.bar(subjects, scores)
-plt.title("Subject Scores")
-plt.xlabel("Subjects")
-plt.ylabel("Scores")
-plt.tight_layout()
-plt.show()
+# plt.subplot(1, 2, 2)
+# plt.bar(subjects, scores)
+# plt.title("Subject Scores")
+# plt.xlabel("Subjects")
+# plt.ylabel("Scores")
+# plt.tight_layout()
+# plt.show()
+
+# Descriptive Statistics Review
+# Descriptive Stats Question 1
+# Given the list below, use NumPy to compute and print the mean, median, variance, and standard deviation. 
+# Label each printed value.
+
+data = [12, 15, 14, 10, 18, 22, 13, 16, 14, 15]
+# print("Mean:", np.mean(data))
+# print("Median:", np.median(data))
+# print("Variance:", np.var(data))
+# print("standard deviation:", np.std(data))
+
+# Descriptive Stats Question 2
+# Generate 500 random values from a normal distribution with mean 65 and standard deviation 10 
+# (use np.random.normal(65, 10, 500)). Plot a histogram with 20 bins. 
+# Add a title "Distribution of Scores" and label both axes.
+
+# random_data = np.random.normal(65, 10, 500)
+# plt.hist(random_data, bins=20)
+# plt.title("Distribution of Scores")
+# plt.show()
+
+# Descriptive Stats Question 3
+# Create a boxplot comparing the two groups below. Label each box ("Group A" and "Group B") and 
+# add a title "Score Comparison".
+# Hint: pass labels=["Group A", "Group B"] to plt.boxplot().
+
+group_a = [55, 60, 63, 70, 68, 62, 58, 65]
+group_b = [75, 80, 78, 90, 85, 79, 82, 88]
+# plt.boxplot([group_a, group_b], labels=["Group A", "Group B"])
+# plt.title("Score Comparison")
+# plt.ylabel("Score")
+# plt.show()
+
+# Descriptive Stats Question 4
+# You are given two datasets: one normally distributed and one 'exponential' distribution.
+
+normal_data = np.random.normal(50, 5, 200)
+skewed_data = np.random.exponential(10, 200)
+# plt.boxplot([normal_data, skewed_data], labels=["normally distributed", "exponential"])
+# plt.title("Distribution Comparison")
+# plt.ylabel("Score")
+# plt.show()
+
+# The skewed_data is more skewed because it has a long tail, whereas the normal_data is balanced and symmetric. 
+# For the balanced data, the mean is the best measure of the center, but for the skewed data, the median is more accurate.
+
+# Descriptive Stats Question 5
+# Print the mean, median, and mode of the following:
+
+data1 = [10, 12, 12, 16, 18]
+data2 = [10, 12, 12, 16, 150]
+# Why are the median and mean so different for data2? Add your answer as a comment in the code.
+
+print("Mean:", np.mean(data1))
+print("Median:", np.median(data1))
+print("Mode:", stats.mode(data1))
+
+print("Mean:", np.mean(data2))
+print("Median:", np.median(data2))
+print("Mode:", stats.mode(data2))
+
+# The mean and median differ in data2 because the value 150 acts as a significant outlier. 
+# While the mean is forced higher by this one large number, the median stays the same because 
+# the middle position of the sorted list hasn't changed.
