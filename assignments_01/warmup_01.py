@@ -270,4 +270,4 @@ def data_pipeline(arr):
     return summarize_data(values_cleaned)
 summary = data_pipeline(arr)
 for key, value in summary.items():
-    print(f"{key}: {value}")
+    print(f"{key}: {value}")    
