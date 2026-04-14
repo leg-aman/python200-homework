@@ -32,7 +32,8 @@ if __name__ == "__main__":
     pipeline_flow()
 
 # This pipeline is simple -- just three small functions on a handful of numbers. Why might Prefect be more overhead than it is worth here?
-# This pipeline is very simple, involving only a few small functions and a minimal dataset. It doesn’t require features like scheduling, retries, monitoring, or complex orchestration. Adding Prefect in this case introduces unnecessary complexity without much benefit.
+# This pipeline is very simple, involving only a few small functions and a minimal dataset. It doesn’t require features like scheduling, retries, monitoring,
+#  or complex orchestration. Adding Prefect in this case introduces unnecessary complexity without much benefit.
 
 # Describe some realistic scenarios where a framework like Prefect could still be useful, even if the pipeline logic itself stays simple like in this case.
 # Prefect becomes valuable in more realistic scenarios, such as: Working with large datasets that take significant time to process
