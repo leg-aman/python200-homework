@@ -145,7 +145,7 @@ c_values = [0.01, 1.0, 100]
 for c in c_values:
     # 1. Initialize and train the model
     # We use scaled data because Logistic Regression prefers it!
-    log_reg = (LogisticRegression(C=c, max_iter=1000, solver='lbfgs'))
+    log_reg = (LogisticRegression(C=c, max_iter=1000, solver='liblinear'))
     log_reg.fit(X_train_scaled, y_train)
     
     # 2. Calculate the total magnitude (size) of the coefficients
