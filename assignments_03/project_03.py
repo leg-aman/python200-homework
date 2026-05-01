@@ -97,6 +97,8 @@ knn.fit(X_train_scaled, y_train)
 print("\nKNN (Scaled)")
 print(accuracy_score(y_test, knn.predict(X_test_scaled)))
 
+# Scaling improved KNN performance due to Spambase's feature sparsity and varying scales; distance-based algorithms like KNN benefit from normalization to prevent features with larger ranges from dominating.
+
 knn.fit(X_train_pca, y_train)
 print("\nKNN (PCA)")
 print(accuracy_score(y_test, knn.predict(X_test_pca)))
@@ -145,6 +147,14 @@ lr.fit(X_train_pca, y_train)
 print("\nLogistic Regression (PCA)")
 print(accuracy_score(y_test, lr.predict(X_test_pca)))
 
+# Summary of Classifier Comparison:
+# Among the five classifiers (KNN scaled, Decision Tree, Random Forest, Logistic Regression scaled, Logistic Regression PCA),
+# Random Forest performed best with the highest accuracy and balanced precision/recall.
+# PCA versions showed mixed results: KNN and Logistic Regression with PCA had slightly lower performance compared to scaled versions,
+# likely due to information loss in dimensionality reduction, though it helped with computational efficiency.
+# Given the cost of false positives in spam filtering (legitimate emails marked as spam), I chose accuracy as the primary metric
+# but also considered precision/recall balance. Random Forest was selected as the final model due to its robustness,
+# high performance, and ability to handle the dataset's features without requiring scaling or PCA.
 
 # --- Feature Importances (Random Forest) ---
 importances = rf.feature_importances_
